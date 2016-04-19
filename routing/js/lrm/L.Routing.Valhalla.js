@@ -395,6 +395,10 @@ if (typeof module !== undefined) module.exports = polyline;
           }
           locs.push(loc);
         }
+        if(directionsOptions)
+            directionsOptions.language = "cs-CZ";
+        else
+        directionsOptions = {language:"cs-CZ"};
           var params = JSON.stringify({
             locations: locs,
             street: streetName,
